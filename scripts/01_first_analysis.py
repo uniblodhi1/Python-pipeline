@@ -5,8 +5,9 @@ from pathlib import Path
 # ============================================================================
 # CONFIGURATION
 # ============================================================================
-INPUT_PATH = "/content/Paper_Data.xlsx"
-OUTPUT_CSV = "outputs_historical_scopes.csv"
+# Get the path relative to the project root
+INPUT_PATH = Path(__file__).parent.parent / "data" / "Paper_Data.xlsx"
+OUTPUT_CSV = Path(__file__).parent.parent / "outputs" / "01_outputs_historical_scopes.csv"
 
 # Flag: assume calcination EF is per ton clinker (True) or per ton cement (False)
 CALC_EF_IS_PER_CLINKER = True
